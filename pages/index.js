@@ -1,3 +1,11 @@
-export default function Home() {
-  return <h1>Hello, Next.js!</h1>;
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/index.html', // Serve index.html from the public folder
+        permanent: true,
+      },
+    ]
+  },
 }
